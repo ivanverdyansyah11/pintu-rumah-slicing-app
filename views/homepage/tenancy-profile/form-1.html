@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tenancy Profile Form Page | Pintu Rumah App</title>
+
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/responsive.css">
+    <!-- END STYLE CSS -->
+
+
+    <!-- SCRIPT JS -->
+    <script src="https://kit.fontawesome.com/e5ccf98c71.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- END SCRIPT JS -->
+</head>
+<body class="mb-5 pb-5">
+    <!-- NAVBAR -->
+    <div class="navbar-tenancy d-flex align-items-center justify-content-between">
+        <a href="../../dashboard/index.html" class="tenancy-button w-100 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-chevron-left" style="font-size: 0.913rem;"></i>
+            Kembali ke Dashboard
+        </a>
+        <div class="tenancy-image w-100">
+            <img src="../../../assets/image/brand/brand-logo.svg" alt="Brand Logo" height="42">
+        </div>
+    </div>
+    <!-- END NAVBAR -->
+
+
+    <!-- SIDEBAR -->
+    <div class="sidebar-tenancy d-none d-md-flex flex-column align-items-center justify-content-center gap-2">
+        <button type="button" class="sidebar-button active w-100 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-user"></i>
+            Pribadi
+        </button>
+        <button type="button" class="sidebar-button w-100 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-suitcase"></i>
+            Pekerjaan
+        </button>
+        <button type="button" class="sidebar-button w-100 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-house"></i>
+            Tempat Tinggal
+        </button>
+        <button type="button" class="sidebar-button w-100 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-folder-closed"></i>
+            Dokumen
+        </button>
+    </div>
+    <!-- END SIDEBAR -->
+
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+        <section class="tenancy-form container">
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <div class="content-header">
+                        <h2 class="title text-center w-100" style="margin-bottom: 6px;">Formulir Permohonan Sewa</h2>
+                        <p class="description text-center">This application will not be processed unless it is filled out completely with copies of all supporting document attached.</p>
+                        <div class="card-property d-flex align-items-center gap-4">
+                            <img src="../../../assets/image/page-main/property/property-2.jpg" alt="Property Image" class="property-image">
+                            <div class="property-content w-100">
+                                <h5 class="content-price" style="margin-bottom: 6px;">$2,400<span>/month</span></h5>
+                                <h5 class="content-title" style="margin-bottom: 12px;">St. Crystal</h5>
+                                <p class="content-description" style="margin-bottom: 16px;">210 US Highway, Highland Lake, FL</p>
+                                <div class="content-facility d-flex align-items-center gap-3 me-4">
+                                    <div class="facility-item d-flex align-items-center gap-2">
+                                        <img src="../../../assets/image/icon/bed-primary.svg" alt="Bed Icon" width="16">
+                                        <p>4 Beds</p>
+                                    </div>
+                                    <div class="facility-item d-flex align-items-center gap-2">
+                                        <img src="../../../assets/image/icon/bathroom-primary.svg" alt="Bathroom Icon" width="16">
+                                        <p>2 Bathrooms</p>
+                                    </div>
+                                    <div class="facility-item d-flex align-items-center gap-2">
+                                        <img src="../../../assets/image/icon/size-primary.svg" alt="Size Icon" width="16">
+                                        <p>6x7.5 m²</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-form">
+                        <h3 class="form-subtitle">Data Diri Pribadi</h3>
+                        <p class="form-description">Silakan mulai profil Anda di bawah ini dengan mengisi informasi pribadi Anda</p>
+                        <div class="form-content">
+                            <h5 class="content-title mb-3">Detail Pengajuan</h5>
+                            <form class="form row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-input d-flex flex-column gap-2 w-100">
+                                        <label for="title">Title</label>
+                                        <select class="input w-100" id="title">
+                                            <option value="">Select title</option>
+                                            <option value="">Pengajuan 1</option>
+                                            <option value="">Pengajuan 2</option>
+                                            <option value="">Pengajuan 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-input d-flex flex-column gap-2 w-100">
+                                        <label for="name">Nama</label>
+                                        <input type="name" class="input" id="name" placeholder="Nama Lengkap">
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="form-input d-flex flex-column gap-2 w-100">
+                                        <label for="date">Tanggal Lahir</label>
+                                        <input type="date" class="input" id="date">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-input d-flex flex-column gap-2 w-100">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="input" id="email" placeholder="contoh@gmail.com">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-input d-flex flex-column gap-2 w-100">
+                                        <label for="phone">Nomor Telepon</label>
+                                        <div class="input-group">
+                                            <button class="btn btn-outline-secondary dropdown-toggle input" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="width: 20% !important;">
+                                                <img src="../../../assets/image/icon/indonesia-flag.svg" alt="Indonesia Flag" class="img-fluid" width="20">
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                            </ul>
+                                            <input type="text" class="input" id="phone" placeholder="+62 81234567891" style="width: 80% !important;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- END MAIN CONTENT -->
+
+    <!-- SCRIPT JS -->
+    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+        });
+    </script>
+    <!-- END SCRIPT JS -->
+</body>
+</html>
