@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Signup Page | Pintu Rumah App</title>
+    <title>Login Page | Pintu Rumah App</title>
 
 
     <!-- STYLE CSS -->
@@ -47,7 +47,7 @@
                             <span class="slider"></span>
                             <p>Saya Pemilik Properti</p>
                         </label>
-                        <a href="../../homepage/main-page/index-login.html" class="button-primary w-100 text-center">Masuk</a>
+                        <a href="../../homepage/main-page/index-login.html" id="button-submit" class="button-primary w-100 text-center">Masuk</a>
                         <button type="button" class="button-outline w-100 text-center d-flex align-items-center gap-2 justify-content-center">
                             <img src="../../../assets/image/social-media/google-color.svg" alt="Google Icon" width="24">
                             Lanjutkan dengan Google
@@ -70,6 +70,17 @@
         AOS.init({
             once: true,
         });
+
+        const buttonSubmit = document.querySelector('#button-submit')
+        const inputCheckbox = document.querySelector('label.switch input')
+
+        inputCheckbox.addEventListener('change', function() {
+            if (inputCheckbox.checked) {
+                buttonSubmit.setAttribute('href', '../../dashboard-staff/index.html')
+            } else {
+                buttonSubmit.setAttribute('href', '../../homepage/main-page/index-login.html')
+            }
+        })
     </script>
     <!-- END SCRIPT JS -->
 </body>
