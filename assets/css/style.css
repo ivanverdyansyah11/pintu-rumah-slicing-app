@@ -225,12 +225,57 @@ a {
     font-size: 0.875rem;
     color: rgba(var(--dark-color), 1);
     border-radius: 6px;
+    background-color: rgba(var(--light-color), 1);
     border: 1px solid rgba(var(--dark-color), 0.12);
 }
 
 .topbar .button-login:hover,
 .navbar .button-login:hover {
     background-color: rgba(var(--primary-color), 0.08);
+}
+
+.navbar .button-popup,
+.topbar .button-popup {
+    position: absolute;
+    bottom: -60px;
+    right: 0;
+    opacity: 0;
+    z-index: -9999;
+    width: 160px;
+    height: fit-content;
+    padding: 12px;
+    background-color: rgba(var(--light-color), 1);
+    border-radius: 6px;
+    border: 1px solid rgba(var(--dark-color), 0.12);
+}
+
+.navbar .button-popup.active,
+.topbar .button-popup.active {
+    bottom: -80px;
+    opacity: 1;
+    z-index: 5;
+}
+
+.navbar .button-popup a,
+.topbar .button-popup a {
+    font-size: 0.813rem;
+    color: rgba(var(--dark-color), 0.62);
+}
+
+.navbar .button-popup a i,
+.topbar .button-popup a i {
+    font-size: 0.813rem;
+    color: rgba(var(--dark-color), 0.62);
+}
+
+.navbar .button-popup a:hover,
+.topbar .button-popup a:hover {
+    color: rgba(var(--primary-color), 1);
+}
+
+.navbar .button-popup a:hover i,
+.topbar .button-popup a:hover i {
+    color: rgba(var(--primary-color), 1);
 }
 /* END NAVBAR */
 

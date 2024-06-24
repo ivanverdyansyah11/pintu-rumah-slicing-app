@@ -74,10 +74,20 @@
         <div class="topbar-group d-flex gap-3 align-items-center">
             <hr>
             <div class="topbar-button topbar-button-login d-none d-lg-flex gap-2 align-items-center position-relative">
-                <a href="#" class="button-login d-flex gap-2 align-items-center">
+                <button class="button-login d-flex gap-2 align-items-center position-relative">
                     <img src="../../../assets/image/profile/profile-image.svg" alt="Profile Image" width="32">
                     Roy WR
-                </a>
+                </button>
+                <div class="button-popup d-flex flex-column gap-2">
+                    <a href="../../dashboard-staff/index.html" class="d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-house"></i>
+                        Dashboard
+                    </a>
+                    <a href="../../authentication/login/index.html" class="d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Logout
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -307,6 +317,10 @@
         AOS.init({
             once: true,
         });
+
+        document.querySelector('.button-login').addEventListener('click', function() {
+            document.querySelector('.button-popup').classList.toggle('active')
+        })
     </script>
     <!-- END SCRIPT JS -->
 </body>

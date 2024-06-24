@@ -42,11 +42,21 @@
                         <i class="fa-solid fa-chevron-down" style="font-size: 0.725rem;"></i>
                     </a>
                 </div>
-                <div class="navbar-button navbar-button-login d-none d-lg-flex gap-2 align-items-center">
-                    <a href="#" class="button-login d-flex gap-2 align-items-center">
+                <div class="navbar-button navbar-button-login d-none d-lg-flex gap-2 align-items-center position-relative">
+                    <button class="button-login d-flex gap-2 align-items-center position-relative">
                         <img src="../../../assets/image/profile/profile-image.svg" alt="Profile Image" width="32">
                         Bimabem
-                    </a>
+                    </button>
+                    <div class="button-popup d-flex flex-column gap-2">
+                        <a href="../../dashboard-admin/index.html" class="d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-house"></i>
+                            Dashboard
+                        </a>
+                        <a href="../../authentication/login/index.html" class="d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Logout
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -186,10 +196,10 @@
                                 Jual
                             </button>
                         </div>
-                        <div class="search-input position-relative" data-aos="fade-right" data-aos-duration="500" data-aos-delay="200">
+                        <form class="search-input position-relative" data-aos="fade-right" data-aos-duration="500" data-aos-delay="200" id="searchForm">
                             <input type="search" class="input-search position-relative" placeholder="Cari..">
                             <img src="../../../assets/image/icon/search-primary.svg" alt="Search Icon" width="16" class="search-icon">
-                        </div>
+                        </form>
                     </div>
                 </div>
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 content-gap">
@@ -539,6 +549,15 @@
         AOS.init({
             once: true,
         });
+
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = '../../homepage/property/index-login.html';
+        });
+
+        document.querySelector('.button-login').addEventListener('click', function() {
+            document.querySelector('.button-popup').classList.toggle('active')
+        })
     </script>
     <!-- END SCRIPT JS -->
 </body>

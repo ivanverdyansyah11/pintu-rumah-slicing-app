@@ -184,10 +184,10 @@
                                 Jual
                             </button>
                         </div>
-                        <div class="search-input position-relative" data-aos="fade-right" data-aos-duration="500" data-aos-delay="200">
+                        <form class="search-input position-relative" data-aos="fade-right" data-aos-duration="500" data-aos-delay="200" id="searchForm">
                             <input type="search" class="input-search position-relative" placeholder="Cari..">
                             <img src="../../../assets/image/icon/search-primary.svg" alt="Search Icon" width="16" class="search-icon">
-                        </div>
+                        </form>
                     </div>
                 </div>
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 content-gap">
@@ -536,6 +536,11 @@
     <script>
         AOS.init({
             once: true,
+        });
+
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = '../../homepage/property/index.html';
         });
     </script>
     <!-- END SCRIPT JS -->
